@@ -29,11 +29,17 @@ def move(board, index, input)
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip.to_i
-  if input >= 1 && input <= 9
-    index = input_to_index(input)
-    valid_move?(board, index)
-  end
+  run = "Y"
+  while run == "Y" do 
+    puts "Please enter 1-9:"
+    input = gets.strip.to_i
 
+    if input >= 1 && input <= 9
+      index = input_to_index(input)
+      valid_move?(board, index)
+      run = "N"
+    else
+      run = "Y"
+    end
+  end
 end
