@@ -13,10 +13,10 @@ end
 
 def valid_move?(board, index)
   index = index.to_i
-  if board[index] == "" || board[index] == " "
+  if (board[index] == "") || (board[index] == " ")
     true
 
-  elsif index < 0 || index > 8 || board[index] == "X" || board[index] == "O"
+  elsif (index < 0) || (index > 8) || (board[index] == "X") || (board[index] == "O")
     false
   end
 
