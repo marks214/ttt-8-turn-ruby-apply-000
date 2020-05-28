@@ -30,7 +30,7 @@ end
 
 def turn(board)
   run = "Y"
-  while run == "Y" do 
+  while run == "Y" do
     puts "Please enter 1-9:"
     input = gets.strip.to_i
 
