@@ -12,12 +12,11 @@ def input_to_index(input)
 end
 
 def valid_move?(board, index)
-  index = index.to_i
-  if (board[index] == "") || (board[index] == " ") || board[index] == nil
+  if board[index] == " " || board[index] == ''
     true
-
-  elsif (index < 0) || (index > 8) || (board[index] == "X") || (board[index] == "O")
+  elsif board[index] == "X" || board[index] == "O" || index < 0 || index > 9
     false
   end
+
 
 end
