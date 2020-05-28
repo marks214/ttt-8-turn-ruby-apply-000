@@ -12,6 +12,7 @@ def input_to_index(input)
 end
 
 def valid_move?(board, index)
+  index = index.to_i
   if board[index] == "" || board[index] == " "
     true
 
