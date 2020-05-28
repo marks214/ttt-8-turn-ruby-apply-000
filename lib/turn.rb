@@ -32,20 +32,15 @@ def turn(board)
   run = "Y"
   while run == "Y" do
     puts "Please enter 1-9:"
-    input = gets.strip.to_i
-
-    if input >= 1 && input <= 9
-      index = input_to_index(input)
-      if valid_move?(board, index)
-        move(board, index, input)
+    input = gets.strip
+    index = input_to_index(input)
+    valid_move?(board, index)
+    move(board, index, input)
         puts " #{board[0]} | #{board[1]} | #{board[2]} "
         puts "-----------"
         puts " #{board[3]} | #{board[4]} | #{board[5]} "
         puts "-----------"
         puts " #{board[6]} | #{board[7]} | #{board[8]} "
-      else
-        run = "Y"
-      end
       run = "N"
     else
       run = "Y"
