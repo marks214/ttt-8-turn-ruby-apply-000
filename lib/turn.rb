@@ -36,7 +36,16 @@ def turn(board)
 
     if input >= 1 && input <= 9
       index = input_to_index(input)
-      valid_move?(board, index)
+      if valid_move?(board, index)
+        move(board, index, input)
+        puts " #{board[0]} | #{board[1]} | #{board[2]} "
+        puts "-----------"
+        puts " #{board[3]} | #{board[4]} | #{board[5]} "
+        puts "-----------"
+        puts " #{board[6]} | #{board[7]} | #{board[8]} "
+      else
+        run = "Y"
+      end
       run = "N"
     else
       run = "Y"
