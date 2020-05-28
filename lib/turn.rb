@@ -19,7 +19,12 @@ def valid_move?(board, index)
     elsif board[index] == "X" || board[index] == "O"
       false
     else
-        false
+      false
     end
   
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
 end
