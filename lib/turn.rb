@@ -11,7 +11,7 @@ def input_to_index(input)
   input = input.to_i - 1
 end
 
-def valid_move(board, index)
+def valid_move?(board, index)
   if board[index] == "" || board[index] == " "
     true
   elsif index < 0 || index > 8 || board[index] == "X" || board[index] == "O"
