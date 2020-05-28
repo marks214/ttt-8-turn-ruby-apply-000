@@ -38,6 +38,7 @@ def turn(board)
       if valid_move?(board, index)
         move(board, index, input)
         display_board(board)
+        puts board
       else
         run = "Y"
       end
